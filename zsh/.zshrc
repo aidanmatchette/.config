@@ -2,6 +2,11 @@
 export ZDOTDIR=$HOME/.config/zsh
 HISTFILE=~/.zsh_history
 setopt appendhistory
+alias vim=nvim
+alias python=python3
+alias ranger='. ranger'
+
+export PGDATA=/opt/homebrew/var/postgres@14
 
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
