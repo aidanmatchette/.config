@@ -20,7 +20,6 @@ opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 
 opt.hlsearch = false
-opt.ignorecase = true
 opt.incsearch = true
 
 --cursor line
@@ -28,13 +27,9 @@ opt.cursorline = true
 
 opt.termguicolors = true
 opt.signcolumn = "yes"
-opt.background = "dark"
+opt.colorcolumn = "80"
 
---backspace
-opt.backspace = "indent,eol,start"
-
---clipboard
-opt.clipboard:append("unnamedplus")
+opt.scrolloff = 8
 
 --cmdheight
 opt.cmdheight = 1
@@ -62,3 +57,35 @@ autocmd('TextYankPost', {
         })
     end,
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
