@@ -29,6 +29,13 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.on_attach(function(client, bufnr)
+
+    if client.name == "jdtls" then
+        require("jdtls").setup_dap({ hotcodereplace = "auto" })
+        require("jdtls.dap").setup_dap_main_class_configs()
+    end
+    client.server_capabilities.document_formatting = true
+
     local opts = { buffer = bufnr, remap = false }
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -43,4 +50,9 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+
 lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true
+})

@@ -6,7 +6,9 @@ alias vim=nvim
 alias python=python3
 alias ranger='. ranger'
 
-export PGDATA=/opt/homebrew/var/postgres@14
+
+# Aliases
+alias ls='gls --color'
 
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
@@ -68,3 +70,4 @@ export EDITOR="nvim"
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"

@@ -31,6 +31,7 @@ keymap("n", "<leader>y", "\"+y", opts)
 keymap("v", "<leader>y", "\"+y", opts)
 keymap("n", "<leader>Y", "\"+Y", opts)
 
+keymap("x", "<leader>p", "\"_dP", opts)
 -- Fast Insert
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)

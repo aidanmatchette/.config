@@ -114,68 +114,68 @@ local config = {
     -- or https://github.com/redhat-developer/vscode-java#supported-vs-code-settings
     -- for a list of options
     settings = {
-        java = {
-            -- jdt = {
-            --   ls = {
-            --     vmargs = "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m"
-            --   }
-            -- },
-            eclipse = {
-                downloadSources = true,
-            },
-            configuration = {
-                updateBuildConfiguration = "interactive",
-            },
-            maven = {
-                downloadSources = true,
-            },
-            implementationsCodeLens = {
-                enabled = true,
-            },
-            referencesCodeLens = {
-                enabled = true,
-            },
-            references = {
-                includeDecompiledSources = true,
-            },
-            inlayHints = {
-                parameterNames = {
-                    enabled = "all", -- literals, all, none
-                },
-            },
-            format = {
-                enabled = false,
-                -- settings = {
-                --   profile = "asdf"
-                -- }
-            },
-        },
-        signatureHelp = { enabled = true },
-        completion = {
-            favoriteStaticMembers = {
-                "org.hamcrest.MatcherAssert.assertThat",
-                "org.hamcrest.Matchers.*",
-                "org.hamcrest.CoreMatchers.*",
-                "org.junit.jupiter.api.Assertions.*",
-                "java.util.Objects.requireNonNull",
-                "java.util.Objects.requireNonNullElse",
-                "org.mockito.Mockito.*",
-            },
-        },
-        contentProvider = { preferred = "fernflower" },
-        extendedClientCapabilities = extendedClientCapabilities,
-        sources = {
-            organizeImports = {
-                starThreshold = 9999,
-                staticStarThreshold = 9999,
-            },
-        },
-        codeGeneration = {
-            toString = {
-                template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
-            },
-            useBlocks = true,
-        },
+        -- java = {
+        --     -- jdt = {
+        --     --   ls = {
+        --     --     vmargs = "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m"
+        --     --   }
+        --     -- },
+        --     eclipse = {
+        --         downloadSources = true,
+        --     },
+        --     configuration = {
+        --         updateBuildConfiguration = "interactive",
+        --     },
+        --     maven = {
+        --         downloadSources = true,
+        --     },
+        --     implementationsCodeLens = {
+        --         enabled = true,
+        --     },
+        --     referencesCodeLens = {
+        --         enabled = true,
+        --     },
+        --     references = {
+        --         includeDecompiledSources = true,
+        --     },
+        --     -- inlayHints = {
+        --     --     parameterNames = {
+        --     --         enabled = "all", -- literals, all, none
+        --     --     },
+        --     -- },
+        --     format = {
+        --         enabled = false,
+        --         -- settings = {
+        --         --   profile = "asdf"
+        --         -- }
+        --     },
+        -- },
+        -- signatureHelp = { enabled = true },
+        -- completion = {
+        --     favoriteStaticMembers = {
+        --         "org.hamcrest.MatcherAssert.assertThat",
+        --         "org.hamcrest.Matchers.*",
+        --         "org.hamcrest.CoreMatchers.*",
+        --         "org.junit.jupiter.api.Assertions.*",
+        --         "java.util.Objects.requireNonNull",
+        --         "java.util.Objects.requireNonNullElse",
+        --         "org.mockito.Mockito.*",
+        --     },
+        -- },
+        -- contentProvider = { preferred = "fernflower" },
+        -- extendedClientCapabilities = extendedClientCapabilities,
+        -- sources = {
+        --     organizeImports = {
+        --         starThreshold = 9999,
+        --         staticStarThreshold = 9999,
+        --     },
+        -- },
+        -- codeGeneration = {
+        --     toString = {
+        --         template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
+        --     },
+        --     useBlocks = true,
+        -- },
     },
 
     flags = {
@@ -189,10 +189,10 @@ local config = {
     -- See https://github.com/mfussenegger/nvim-jdtls#java-debug-installation
     --
     -- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
-    init_options = {
-        -- bundles = {},
-        bundles = bundles,
-    },
+    -- init_options = {
+    --     -- bundles = {},
+    --     bundles = bundles,
+    -- },
 }
 
 -- This starts a new client & server,
@@ -200,12 +200,12 @@ local config = {
 jdtls.start_or_attach(config)
 
 -- require('jdtls').setup_dap()
-
-vim.cmd "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_compile JdtCompile lua require('jdtls').compile(<f-args>)"
-vim.cmd "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_set_runtime JdtSetRuntime lua require('jdtls').set_runtime(<f-args>)"
-vim.cmd "command! -buffer JdtUpdateConfig lua require('jdtls').update_project_config()"
--- vim.cmd "command! -buffer JdtJol lua require('jdtls').jol()"
-vim.cmd "command! -buffer JdtBytecode lua require('jdtls').javap()"
+--
+-- vim.cmd "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_compile JdtCompile lua require('jdtls').compile(<f-args>)"
+-- vim.cmd "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_set_runtime JdtSetRuntime lua require('jdtls').set_runtime(<f-args>)"
+-- vim.cmd "command! -buffer JdtUpdateConfig lua require('jdtls').update_project_config()"
+-- -- vim.cmd "command! -buffer JdtJol lua require('jdtls').jol()"
+-- vim.cmd "command! -buffer JdtBytecode lua require('jdtls').javap()"
 -- vim.cmd "command! -buffer JdtJshell lua require('jdtls').jshell()"
 
 -- local status_ok, which_key = pcall(require, "which-key")
