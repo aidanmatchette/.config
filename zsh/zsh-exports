@@ -8,7 +8,16 @@ export MANWIDTH=999
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
-export PATH=$HOME/.fnm:$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH
+export PATH="/Users/aidanmatchette/code/rust/binaries":$PATH
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
 
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@15/lib/pkgconfig"
+
+export LS_COLORS="$(vivid generate ~/.config/colors/catppuccin-macchiato.yml)"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+export PGDATA=/opt/homebrew/var/postgres@14
