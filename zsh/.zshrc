@@ -10,6 +10,9 @@ alias ranger='. ranger'
 # Aliases
 alias ls='gls --color'
 
+#Zoxide
+eval "$(zoxide init zsh)"
+
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
 setopt interactive_comments
