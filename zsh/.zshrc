@@ -59,18 +59,12 @@ zsh_add_plugin "hlissner/zsh-autopair"
 # Key-bindings
 bindkey -r "^d"
 
-compinit
 
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-# bindkey '^e' edit-command-line
-
-# Environment variables set everywhere
 export EDITOR="nvim"
-#export TERMINAL="alacritty"
-#export BROWSER="brave"
 
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+source /opt/homebrew/Cellar/fzf/0.38.0/shell/key-bindings.zsh
