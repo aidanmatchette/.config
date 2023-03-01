@@ -4,11 +4,18 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
     'tsserver',
-    'eslint',
-    'sumneko_lua',
     'rust_analyzer',
     'jdtls',
     'pyright'
+})
+lsp.configure('lua-language-server', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
 })
 
 local cmp = require('cmp')

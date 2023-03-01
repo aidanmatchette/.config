@@ -12,6 +12,7 @@ export GOPATH=$HOME/.local/share/go
 export PATH="$HOME/.local/share/neovim/bin":$PATH
 export PATH="/Users/aidanmatchette/code/rust/binaries":$PATH
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 
 export FZF_CTRL_R_OPTS="--border-label=' History ' --prompt=' '"
 export FZF_DEFAULT_COMMAND="fd -H -E '.git'"
