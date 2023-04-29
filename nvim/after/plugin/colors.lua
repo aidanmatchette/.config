@@ -1,22 +1,12 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine"
+    color = color or "gruvbox-material"
 
-    require('rose-pine').setup({
-        --- @usage 'auto'|'main'|'moon'|'dawn'
-        variant = 'auto',
-        --- @usage 'main'|'moon'|'dawn'
-        dark_variant = 'main',
-        bold_vert_split = false,
-        dim_nc_background = false,
-        disable_background = true,
-        disable_float_background = true,
-        disable_italics = true,
+    vim.g.gruvbox_material_transparent_background = 1
+    vim.g.gruvbox_material_foreground = "material"
+    vim.g.gruvbox_material_ui_contrast = "high"
+    vim.g.gruvbox_material_background = "hard"
 
-        -- Change specific vim highlight groups
-        -- https://github.com/rose-pine/neovim/wiki/Recipes
-    })
-
-	vim.cmd.colorscheme(color)
+    vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
