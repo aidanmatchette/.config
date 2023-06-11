@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
 		as = 'rose-pine',
 	})
 
-    use {"sainnhe/gruvbox-material"}
+    use { "catppuccin/nvim", as = "catppuccin" }
 
 	use({
 		"folke/trouble.nvim",
