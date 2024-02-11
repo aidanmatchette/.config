@@ -35,13 +35,17 @@ return require('packer').startup(function(use)
 
 	use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
 	use("nvim-treesitter/playground")
-	use("theprimeagen/harpoon")
+	use({
+        "theprimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = {"nvim-lua/plenary.nvim"}
+
+    })
 	use("theprimeagen/refactoring.nvim")
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
 	use("nvim-treesitter/nvim-treesitter-context");
     use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
-
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',

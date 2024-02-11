@@ -67,4 +67,4 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
-source /opt/homebrew/Cellar/fzf/0.38.0/shell/key-bindings.zsh
+# source /opt/homebrew/Cellar/fzf/0.38.0/shell/key-bindings.zsh
